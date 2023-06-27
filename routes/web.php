@@ -14,11 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $links = config('db.someLinks');
+    $links = config('store.someLinks');
     return view('welcome', compact('links'));
 });
 
 Route::get('/otherpage', function () {
-    $links = config('db.someLinks');
-    return view('other', compact('links'));
+    $links = config('store.someLinks');
+    return view('other', $links );
 });
